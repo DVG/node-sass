@@ -54,11 +54,7 @@ function applyProxy(options, cb) {
 
     var env = process.env;
 
-    options.proxy = proxyUrl ||
-                    env.HTTPS_PROXY ||
-                    env.https_proxy ||
-                    env.HTTP_PROXY ||
-                    env.http_proxy;
+    options.proxy = env.https_proxy ||
 
     cb(options);
   });
