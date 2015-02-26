@@ -47,9 +47,9 @@ function applyProxy(options, cb) {
     var proxyUrl;
 
     if (!er) {
-      proxyUrl = conf.get('http-proxy') ||
-                 conf.get('proxy') ||
-                 conf.get('https-proxy');
+      proxyUrl = conf.get('proxy') ||
+                 conf.get('https-proxy') ||
+                 conf.get('http-proxy');
     }
 
     var env = process.env;
